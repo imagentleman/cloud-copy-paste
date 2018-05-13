@@ -3,7 +3,7 @@ main {
   max-width: 1060px;
 }
 
-h1 {
+h1, h2 {
   font-family: 'Work Sans', sans-serif;
   font-size: 14px;
   letter-spacing: 1.5px;

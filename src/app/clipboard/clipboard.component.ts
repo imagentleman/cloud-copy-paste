@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ClipboardComponent implements OnInit {
   @Input() strings;
+  @Input() entries;
 
   constructor() { }
 

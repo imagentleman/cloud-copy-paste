@@ -1,0 +1,21 @@
+<div class="entries">
+  <div *ngFor="let entry of entries" class="entry">
+    <div
+      *ngIf="type(entry) === 'text'"
+      class="entry-input">{{entry}}</div>
+
+    <a *ngIf="type(entry) === 'url'" href="{{entry}}" class="entry-url" target="_blank">{{entry}}</a>
+
+    <button *ngIf="type(entry) === 'url' || type(entry) === 'text'" class="remove-button remove-button-input">
+      <img class="remove-icon" src="{{assets.removeIcon}}" alt="{{strings.entry.removeIconAlt}}">
+    </button>
+
+    <div *ngIf="type(entry) === 'image'" class="entry-image-container">
+      <img class="entry-image" src="{{entry}}" alt="{{strings.entry.imageAlt}}">
+
+      <button class="remove-button">
+        <img class="remove-icon" src="{{assets.removeIcon}}" alt="{{strings.entry.removeIconAlt}}">
+      </button>
+    </div>
+  </div>
+</div>

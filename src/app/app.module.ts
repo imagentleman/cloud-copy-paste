@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { ClipboardComponent } from './clipboard/clipboard.component';
 import { InputComponent } from './input/input.component';
+import { EntriesComponent } from './entries/entries.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { InputComponent } from './input/input.component';
     NavComponent,
     ClipboardComponent,
     InputComponent,
+    EntriesComponent,
   ],
   imports: [
     BrowserModule

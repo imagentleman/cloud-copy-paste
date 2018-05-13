@@ -1,4 +1,5 @@
 .input {
+  align-items: center;
   display: flex;
 }
 
@@ -12,17 +13,10 @@ textarea {
 .add-button {
   border: 0;
   cursor: pointer;
+  display: inline;
   padding: 0;
 }
 
 .add-icon {
   width: 56px;
-}
-
-.add-icon:hover path {
-  fill: #1a73e8;
-}
-
-svg path {
-  fill: red;
 }

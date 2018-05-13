@@ -1,0 +1,61 @@
+.entries {
+  margin-bottom: 100px;
+}
+
+.entry {
+  align-items: center;
+  display: flex;
+}
+
+.entry + .entry {
+  margin-top: 16px;
+}
+
+.entry-input,
+.entry-url {
+  border: 0;
+  flex: 1;
+  font-size: 16px;
+  margin-left: 18.8%;
+  margin-right: 40px;
+}
+
+.entry-url {
+  color: #1a73e8;
+}
+
+.entry-image-container {
+  position: relative;
+}
+
+.entry-image-container .remove-button {
+  background-color: transparent;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  visibility: hidden;
+}
+
+.entry-image-container:hover .remove-button {
+  visibility: visible;
+}
+
+.entry-image {
+  height: 100%;
+  width: 100%;
+}
+
+.remove-button {
+  border: 0;
+  cursor: pointer;
+  display: inline;
+  padding: 0;
+}
+
+.remove-button-input {
+  margin-right: 15.2%;
+}
+
+.remove-icon {
+  width: 28px;
+}

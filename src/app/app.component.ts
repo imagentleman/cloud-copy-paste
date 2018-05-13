@@ -12,7 +12,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.entries = [
-      "/assets/lake.jpg",
+      "/dist/ccp/assets/lake.jpg",
       "http://ccc.2018.angularattack.io",
       "Angular Attack Idea: Lightweight shared clipboard solution, across devices and operating systems...",
       `Found a great portrait wallpaper while searching on your laptop and want to easily share it with your phone?

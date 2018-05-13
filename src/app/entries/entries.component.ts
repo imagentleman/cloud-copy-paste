@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewChecked, ViewChild } from '@angular/core';
 import  { imageExtensions } from '../constants/image';
 import { assets } from '../constants/assets';
 
@@ -10,11 +10,22 @@ import { assets } from '../constants/assets';
 export class EntriesComponent implements OnInit {
   @Input() strings;
   @Input() entries;
+  @ViewChild('input') input;
+
   assets = assets;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewChecked() {
+    const textareas = document.querySelectorAll('textarea');
+
+    for (let i = 0; i < textareas.length; i++) {
+      textareas[i].style.height = 'auto';
+      textareas[i].style.height = (textareas[i].scrollHeight) + 'px';
+    }
   }
 
   selectAll(textarea) {

@@ -10,4 +10,16 @@
     messagingSenderId: "729151789086"
   };
   firebase.initializeApp(config);
+
+  // setup a database reference at path /channels/channelId
+  const channel = firebase.database().ref(location.pathname.slice(1));
+  // add a listener to the path that fires any time the value of the data changes
+  channel.on('value', function(data) {
+    const newEntries = data.val();
+
+    const event = new CustomEvent("updateentries", {
+      detail: newEntries
+    });
+    document.dispatchEvent(event);
+  });
 </script>

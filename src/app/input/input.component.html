@@ -1,7 +1,13 @@
 <div class="input">
-  <textarea #input (focus)="selectAll(input)" (input)="resize(input)" rows="1">{{strings.input.placeholder}}</textarea>
+  <textarea
+    #input
+    (focus)="selectAll(input)"
+    (input)="resize(input)"
+    (keydown.enter)="$event.preventDefault()"
+    (keyup.enter)="add($event, input)"
+    rows="1">{{strings.input.placeholder}}</textarea>
 
-  <button class="add-button" (click)="add(input)">
+  <button class="add-button" (click)="add($event, input)">
     <img class="add-icon" src="{{assets.addIcon}}" alt="{{strings.input.addIconAlt}}">
   </button>
 </div>

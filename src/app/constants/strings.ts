@@ -5,7 +5,7 @@ export const strings = {
     entriesTitle: 'Entries'
   },
   input: {
-    placeholder: "Paste or submit any text here and i'll be synced in all devices where this page is open",
+    placeholder: "Submit any text here and i'll be synced in all devices where this page is open in real time.",
     addIconAlt: 'Add'
   },
   entry: {

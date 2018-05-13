@@ -30,7 +30,13 @@ export class InputComponent implements OnInit {
     textarea.style.height = (textarea.scrollHeight) + 'px';
   }
 
-  add(textarea) {
+  add(e, textarea) {
+    e.preventDefault();
+
+    if (!textarea.value) {
+      return;
+    }
+
     const params = {}
 
     params["value"] = textarea.value;

@@ -20,13 +20,28 @@
   resize: none;
 }
 
+@media (max-width: 800px) {
+  .entry-input {
+    font-size: 28px;
+  }
+}
+
 .entry-url {
   border: 0;
   flex: 1;
   font-size: 56px;
   line-height: 70px;
   margin-right: 40px;
+  overflow: hidden;
   text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+  .entry-url {
+    font-size: 28px;
+  }
 }
 
 .entry-url {

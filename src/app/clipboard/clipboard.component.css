@@ -1,6 +1,7 @@
 main {
   margin: 0 auto;
   max-width: 1060px;
+  padding: 0 20px;
 }
 
 h1, h2 {

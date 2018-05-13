@@ -12,6 +12,12 @@ textarea {
   resize: none;
 }
 
+@media (max-width: 800px) {
+  textarea {
+    font-size: 28px;
+  }
+}
+
 .add-button {
   background-color: transparent;
   border: 0;

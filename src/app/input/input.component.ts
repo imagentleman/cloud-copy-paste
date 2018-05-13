@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input, ViewChild } from '@angular/core';
 import { assets } from '../constants/assets';
 
 @Component({
@@ -8,6 +8,7 @@ import { assets } from '../constants/assets';
 })
 export class InputComponent implements OnInit {
   @Input() strings;
+  @ViewChild('input') input;
   assets = assets;
 
   constructor() { }
@@ -15,7 +16,32 @@ export class InputComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngAfterViewInit() {
+    this.input.nativeElement.style.height = 'auto';
+    this.input.nativeElement.style.height = (this.input.nativeElement.scrollHeight) + 'px';
+  }
+
   selectAll(textarea) {
     textarea.setSelectionRange(0, textarea.value.length);
+  }
+
+  resize(textarea) {
+    textarea.style.height = 'auto';
+    textarea.style.height = (textarea.scrollHeight) + 'px';
+  }
+
+  add(textarea) {
+    const params = {}
+
+    params["value"] = textarea.value;
+
+    fetch('/post/' + location.pathname.slice(1),{
+      method: 'post',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(params)
+    });
   }
 }

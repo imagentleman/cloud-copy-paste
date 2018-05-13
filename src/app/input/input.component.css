@@ -6,7 +6,9 @@
 textarea {
   border: 0;
   flex: 1;
+  font-family: 'Roboto', sans-serif;
   font-size: 56px;
+  /* height: 70px; */
   margin-right: 40px;
 }
 

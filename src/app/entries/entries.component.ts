@@ -21,6 +21,21 @@ export class EntriesComponent implements OnInit {
     textarea.setSelectionRange(0, textarea.value.length);
   }
 
+  remove(textarea, key) {
+    const params = {}
+
+    params["key"] = key;
+
+    fetch('/delete/' + location.pathname.slice(1),{
+      method: 'post',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(params)
+    });
+  }
+
   type(entry) {
     const isImage = imageExtensions.filter(ext => entry.indexOf(ext) !== -1).length;
 

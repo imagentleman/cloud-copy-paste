@@ -145,6 +145,12 @@ def post_clipboard(clipboard):
     params = request.get_json()
     return flask.jsonify(firebase_post(url, json.dumps(params['value'])))
 
+@app.route('/delete/<clipboard>', methods=['POST'])
+def delete_clipboard(clipboard):
+    params = request.get_json()
+    url = '{}/{}/{}.json'.format(_get_firebase_db_url(), clipboard, params['key'])
+    return flask.jsonify(firebase_delete(url))
+
 @app.route('/<clipboard>')
 def clipboard(clipboard):
     url = '{}/{}.json'.format(_get_firebase_db_url(), clipboard)

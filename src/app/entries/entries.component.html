@@ -1,22 +1,25 @@
 <div class="entries">
   <div *ngFor="let entry of entries" class="entry">
     <textarea
-      *ngIf="type(entry) === 'text'"
+      *ngIf="type(entry.value) === 'text'"
       #input
       (focus)="selectAll(input)"
       class="entry-input"
-      rows="1">{{entry}}</textarea>
+      rows="1">{{entry.value}}</textarea>
 
-    <a *ngIf="type(entry) === 'url'" href="{{entry}}" class="entry-url" target="_blank">{{entry}}</a>
+    <a *ngIf="type(entry.value) === 'url'" href="{{entry.value}}" class="entry-url" target="_blank">{{entry.value}}</a>
 
-    <button *ngIf="type(entry) === 'url' || type(entry) === 'text'" class="remove-button remove-button-input">
+    <button
+      *ngIf="type(entry.value) === 'url' || type(entry.value) === 'text'"
+      class="remove-button remove-button-input"
+      (click)="remove(input, entry.key)">
       <img class="remove-icon" src="{{assets.removeIcon}}" alt="{{strings.entry.removeIconAlt}}">
     </button>
 
-    <div *ngIf="type(entry) === 'image'" class="entry-image-container">
-      <img class="entry-image" src="{{entry}}" alt="{{strings.entry.imageAlt}}">
+    <div *ngIf="type(entry.value) === 'image'" class="entry-image-container">
+      <img class="entry-image" src="{{entry.value}}" alt="{{strings.entry.imageAlt}}">
 
-      <button class="remove-button">
+      <button class="remove-button" (click)="remove(input, entry.key)">
         <img class="remove-icon" src="{{assets.removeIcon}}" alt="{{strings.entry.removeIconAlt}}">
       </button>
     </div>

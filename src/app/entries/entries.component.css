@@ -11,13 +11,22 @@
   margin-top: 16px;
 }
 
-.entry-input,
+.entry-input {
+  border: 0;
+  flex: 1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 56px;
+  margin-right: 40px;
+  resize: none;
+}
+
 .entry-url {
   border: 0;
   flex: 1;
-  font-size: 16px;
-  margin-left: 18.8%;
+  font-size: 56px;
+  line-height: 70px;
   margin-right: 40px;
+  text-decoration: none;
 }
 
 .entry-url {
@@ -50,10 +59,6 @@
   cursor: pointer;
   display: inline;
   padding: 0;
-}
-
-.remove-button-input {
-  margin-right: 15.2%;
 }
 
 .remove-icon {

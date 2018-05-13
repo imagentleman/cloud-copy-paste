@@ -8,8 +8,8 @@ textarea {
   flex: 1;
   font-family: 'Roboto', sans-serif;
   font-size: 56px;
-  /* height: 70px; */
   margin-right: 40px;
+  resize: none;
 }
 
 .add-button {

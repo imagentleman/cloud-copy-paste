@@ -17,6 +17,10 @@ export class EntriesComponent implements OnInit {
   ngOnInit() {
   }
 
+  selectAll(textarea) {
+    textarea.setSelectionRange(0, textarea.value.length);
+  }
+
   type(entry) {
     const isImage = imageExtensions.filter(ext => entry.indexOf(ext) !== -1).length;
 

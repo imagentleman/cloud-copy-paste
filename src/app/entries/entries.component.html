@@ -1,8 +1,11 @@
 <div class="entries">
   <div *ngFor="let entry of entries" class="entry">
-    <div
+    <textarea
       *ngIf="type(entry) === 'text'"
-      class="entry-input">{{entry}}</div>
+      #input
+      (focus)="selectAll(input)"
+      class="entry-input"
+      rows="1">{{entry}}</textarea>
 
     <a *ngIf="type(entry) === 'url'" href="{{entry}}" class="entry-url" target="_blank">{{entry}}</a>
 

@@ -1,0 +1,28 @@
+.input {
+  display: flex;
+}
+
+textarea {
+  border: 0;
+  flex: 1;
+  font-size: 56px;
+  margin-right: 40px;
+}
+
+.add-button {
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.add-icon {
+  width: 56px;
+}
+
+.add-icon:hover path {
+  fill: #1a73e8;
+}
+
+svg path {
+  fill: red;
+}

@@ -1,6 +1,9 @@
 # Ccp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+## Demo
+http://cloud-copy-paste.appspot.com/mps
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1 for Angular Attack 2018.
 
 ## Development server
 
